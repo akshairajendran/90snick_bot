@@ -22,4 +22,21 @@ api = tweepy.API(auth)
 #include this at the beginning of all twitter access scripts#
 #############################################################
 
-api.update_status("sup justin hello from python")
+#set username
+user_name = 'stankarrhea'
+
+#start getting tweets
+new_tweets = api.user_timeline(screen_name = user_name, count=200)
+all_tweets = [tweets for tweets in new_tweets]
+
+#set id for oldest tweet
+oldest = all_tweets[-1].id - 1
+
+#start loop to get beyond 200
+while len(new_tweets) > 0:
+    new_tweets = api.user_timeline(screen_name = user_name, count=200,max_id = oldest)
+    all_tweets.extend(new_tweets)
+    oldest = all_tweets[-1].id - 1
+
+#create list with just tweet text
+all_tweets_txt = [tweets.text for tweets in all_tweets]
