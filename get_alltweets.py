@@ -1,5 +1,6 @@
 __author__ = 'arajendran'
 import tweepy
+import cPickle as pickle
 
 #open config file and create keys list from that
 f = open('config.txt','r')
@@ -23,7 +24,7 @@ api = tweepy.API(auth)
 #############################################################
 
 #set username
-user_name = 'stankarrhea'
+user_name = keys_list[4]
 
 #start getting tweets
 new_tweets = api.user_timeline(screen_name = user_name, count=200)
@@ -40,3 +41,12 @@ while len(new_tweets) > 0:
 
 #create list with just tweet text
 all_tweets_txt = [tweets.text for tweets in all_tweets]
+
+#remove tags from all_tweets_txt
+all_tweets_txt_notag = []
+for i in range(len(all_tweets_txt)):
+    new_string = " ".join(word for word in all_tweets_txt[i].split() if not '@' in word)
+    all_tweets_txt_notag.append(new_string)
+
+#dump list to pickle db
+pickle.dump(all_tweets_txt_notag, open('all_tweets.p','wb'))
