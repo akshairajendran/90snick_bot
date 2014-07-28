@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gen_tweet.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="gen_tweet.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gen_tweet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="538" max-vertical-offset="1173">
-              <caret line="62" column="35" selection-start-line="60" selection-start-column="29" selection-end-line="62" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.19685039" vertical-offset="368" max-vertical-offset="1173">
+              <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -46,18 +46,18 @@
       <file leaf-file-name="auto_follow.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auto_follow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="451" max-vertical-offset="935">
+            <state vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="850">
               <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32125986" vertical-offset="0" max-vertical-offset="635">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -79,8 +79,8 @@
         <option value="C:/Python27/Lib/site-packages/nltk/probability.py" />
         <option value="$PROJECT_DIR$/get_alltweets.py" />
         <option value="$PROJECT_DIR$/auto_follow.py" />
-        <option value="$PROJECT_DIR$/gen_tweet.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/gen_tweet.py" />
       </list>
     </option>
   </component>
@@ -551,6 +551,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/auto_follow.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="451" max-vertical-offset="935">
@@ -561,16 +569,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gen_tweet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="538" max-vertical-offset="1173">
-          <caret line="62" column="35" selection-start-line="60" selection-start-column="29" selection-end-line="62" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32125986" vertical-offset="0" max-vertical-offset="635">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.19685039" vertical-offset="368" max-vertical-offset="1173">
+          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
           <folding />
         </state>
       </provider>

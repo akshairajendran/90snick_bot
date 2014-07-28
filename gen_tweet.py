@@ -32,15 +32,15 @@ api = tweepy.API(auth)
 #include this at the beginning of all twitter access scripts#
 #############################################################
 
-#load tweets list and move random 2 tweets to front
-#this is a workaround to randomize starting state of Markov
-all_tweets = pickle.load(open("all_tweets.p","rb"))
-random_index = random.randint(20,len(all_tweets)-1)
-all_tweets.insert(0,all_tweets.pop(random_index))
-random_index2 = random.randint(20,len(all_tweets)-1)
-all_tweets.insert(1,all_tweets.pop(random_index2))
-
 def tweet():
+    #load tweets list and move random 2 tweets to front
+    #this is a workaround to randomize starting state of Markov
+    all_tweets = pickle.load(open("all_tweets.p","rb"))
+    random_index = random.randint(20,len(all_tweets)-1)
+    all_tweets.insert(0,all_tweets.pop(random_index))
+    random_index2 = random.randint(20,len(all_tweets)-1)
+    all_tweets.insert(1,all_tweets.pop(random_index2))
+
     #tokenize
     tokens = []
     for string in all_tweets:
