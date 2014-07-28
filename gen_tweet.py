@@ -3,8 +3,7 @@ __author__ = 'Akshai Rajendran'
 import tweepy
 import cPickle as pickle
 import nltk
-import nltk.util
-import nltk.model
+
 
 #open config file and create keys list from that
 f = open('config.txt','r')
@@ -38,4 +37,4 @@ tokens = [item for sublist in tokens for item in sublist]
 print tokens
 
 #trainer from tokens?
-trainer = nltk.model.NgramModel(3,tokens).generate(5)
+#trainer = nltk.model.NgramModel(3,tokens).generate(5)
