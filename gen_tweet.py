@@ -3,6 +3,9 @@ __author__ = 'Akshai Rajendran'
 import tweepy
 import cPickle as pickle
 import nltk
+import nltk.model
+import nltk.probability
+import random
 
 
 #open config file and create keys list from that
@@ -26,15 +29,35 @@ api = tweepy.API(auth)
 #include this at the beginning of all twitter access scripts#
 #############################################################
 
-#load tweets list
+#load tweets list and move random 2 tweets to front
+#this is a workaround to randomize starting state of Markov
 all_tweets = pickle.load(open("all_tweets.p","rb"))
+random_index = random.randint(20,len(all_tweets)-1)
+all_tweets.insert(0,all_tweets.pop(random_index))
+random_index2 = random.randint(20,len(all_tweets)-1)
+all_tweets.insert(1,all_tweets.pop(random_index2))
 
-tokens = []
+
 #tokenize
+tokens = []
 for string in all_tweets:
     tokens.append(nltk.word_tokenize(string))
+#we have a list of list of tokens and now we flatten that to one list
 tokens = [item for sublist in tokens for item in sublist]
-print tokens
 
-#trainer from tokens?
-#trainer = nltk.model.NgramModel(3,tokens).generate(5)
+
+#create tweet model from tokens
+tweet_model = nltk.model.NgramModel(2,tokens)
+
+#create random tweet length and create tweet
+tweet_len = random.randint(5,15)
+tweet = " ".join(tweet_model.generate(tweet_len))
+
+#punctuation will have a space before it so remove that
+punctuation = [",", "!", ".", "'", "n't", ":", ";","&",")"]
+for punct in punctuation:
+    tweet = tweet.replace(" " + punct, punct)
+
+#tweet!!
+api.update_status(tweet)
+

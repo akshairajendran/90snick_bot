@@ -42,10 +42,10 @@ while len(new_tweets) > 0:
 #create list with just tweet text
 all_tweets_txt = [tweets.text for tweets in all_tweets]
 
-#remove tags from all_tweets_txt
+#remove various things from all_tweets_txt
 all_tweets_txt_notag = []
 for i in range(len(all_tweets_txt)):
-    new_string = " ".join(word for word in all_tweets_txt[i].split() if not '@' in word)
+    new_string = " ".join(word for word in all_tweets_txt[i].split() if not '@' in word and not '#' in word and not 'http' in word and not 'RT' in word)
     all_tweets_txt_notag.append(new_string)
 
 #dump list to pickle db
