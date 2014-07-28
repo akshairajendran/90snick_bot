@@ -32,17 +32,18 @@ api = tweepy.API(auth)
 #include this at the beginning of all twitter access scripts#
 #############################################################
 
-#create me and my followers and friends lists
-me = api.me()
-followers = api.followers_ids(me.name)
-friends = api.friends_ids(me.name)
+def follow():
+    #create me and my followers and friends lists
+    me = api.me()
+    followers = api.followers_ids(me.name)
+    friends = api.friends_ids(me.name)
 
-#if my friends/followers is less than .7, find the people whole follow me
-#that I don't follow, and select one of them randomly to follow
-if float(me.friends_count)/float(me.followers_count) < .7:
-    potential_friend = [follower for follower in followers if follower not in friends]
-    new_friend = random.choice(potential_friend)
-    api.create_friendship(new_friend)
-else:
-    pass
+    #if my friends/followers is less than .7, find the people whole follow me
+    #that I don't follow, and select one of them randomly to follow
+    if float(me.friends_count)/float(me.followers_count) < .7:
+        potential_friend = [follower for follower in followers if follower not in friends]
+        new_friend = random.choice(potential_friend)
+        api.create_friendship(new_friend)
+    else:
+        pass
 

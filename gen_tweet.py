@@ -40,30 +40,29 @@ all_tweets.insert(0,all_tweets.pop(random_index))
 random_index2 = random.randint(20,len(all_tweets)-1)
 all_tweets.insert(1,all_tweets.pop(random_index2))
 
+def tweet():
+    #tokenize
+    tokens = []
+    for string in all_tweets:
+        tokens.append(nltk.word_tokenize(string))
+    #we have a list of list of tokens and now we flatten that to one list
+    tokens = [item for sublist in tokens for item in sublist]
 
-#tokenize
-tokens = []
-for string in all_tweets:
-    tokens.append(nltk.word_tokenize(string))
-#we have a list of list of tokens and now we flatten that to one list
-tokens = [item for sublist in tokens for item in sublist]
 
+    #create tweet model from tokens
+    tweet_model = nltk.model.NgramModel(2,tokens)
 
-#create tweet model from tokens
-tweet_model = nltk.model.NgramModel(2,tokens)
+    #create random tweet length and create tweet
+    tweet_len = random.randint(5,15)
+    tweet = " ".join(tweet_model.generate(tweet_len))
 
-#create random tweet length and create tweet
-tweet_len = random.randint(5,15)
-tweet = " ".join(tweet_model.generate(tweet_len))
+    #punctuation will have a space before it so remove that
+    punctuation = [",", "!", ".", "'", "n't", ":", ";","&",")","?"]
+    for punct in punctuation:
+        tweet = tweet.replace(" " + punct, punct)
+    tweet = tweet.replace("# ","#")
 
-#punctuation will have a space before it so remove that
-punctuation = [",", "!", ".", "'", "n't", ":", ";","&",")","?"]
-for punct in punctuation:
-    tweet = tweet.replace(" " + punct, punct)
-tweet = tweet.replace("# ","#")
-print tweet
-
-#tweet!!
-api.update_status(tweet)
+    #tweet!!
+    api.update_status(tweet)
 
 
