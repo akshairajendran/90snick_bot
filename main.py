@@ -11,6 +11,6 @@ def run():
     while True:
         gen_tweet.tweet()
         auto_follow.follow()
-        time.sleep(random.randint(14400,28800))
+        time.sleep(random.randint(0,2))
 
 
