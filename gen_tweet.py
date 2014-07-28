@@ -18,6 +18,9 @@ consumer_secret = keys_list[1]
 access_token = keys_list[2]
 access_token_secret = keys_list[3]
 
+#set username
+user_name = keys_list[4]
+
 #OAuth process, using the keys and tokens
 auth = tweepy.OAuthHandler(consumer_key,consumer_secret)
 auth.set_access_token(access_token,access_token_secret)
@@ -54,10 +57,13 @@ tweet_len = random.randint(5,15)
 tweet = " ".join(tweet_model.generate(tweet_len))
 
 #punctuation will have a space before it so remove that
-punctuation = [",", "!", ".", "'", "n't", ":", ";","&",")"]
+punctuation = [",", "!", ".", "'", "n't", ":", ";","&",")","?"]
 for punct in punctuation:
     tweet = tweet.replace(" " + punct, punct)
+tweet = tweet.replace("# ","#")
+print tweet
 
 #tweet!!
 api.update_status(tweet)
+
 

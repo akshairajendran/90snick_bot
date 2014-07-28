@@ -26,18 +26,30 @@
       <file leaf-file-name="get_alltweets.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_alltweets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="952">
-              <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="294" max-vertical-offset="952">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gen_tweet.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="gen_tweet.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gen_tweet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6730769" vertical-offset="757" max-vertical-offset="1173">
-              <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="604" max-vertical-offset="1275">
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+              <folding>
+                <element signature="e#33#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auto_follow.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/auto_follow.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4278846" vertical-offset="502" max-vertical-offset="918">
+              <caret line="40" column="63" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
               <folding>
                 <element signature="e#33#46#0" expanded="true" />
               </folding>
@@ -61,12 +73,13 @@
         <option value="C:/Python27/Lib/site-packages/nltk/probability.py" />
         <option value="$PROJECT_DIR$/get_alltweets.py" />
         <option value="$PROJECT_DIR$/gen_tweet.py" />
+        <option value="$PROJECT_DIR$/auto_follow.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="537" />
-    <option name="y" value="94" />
+    <option name="x" value="317" />
+    <option name="y" value="114" />
     <option name="width" value="1280" />
     <option name="height" value="771" />
   </component>
@@ -133,7 +146,7 @@
       <console-settings />
     </option>
   </component>
-  <component name="RunManager" selected="Python.gen_tweet">
+  <component name="RunManager" selected="Python.auto_follow">
     <configuration default="false" name="get_alltweets" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -165,6 +178,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="90snick_bot" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gen_tweet.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="auto_follow" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="90snick_bot" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/auto_follow.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -291,14 +322,16 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.get_alltweets" />
       <item index="1" class="java.lang.String" itemvalue="Python.gen_tweet" />
+      <item index="2" class="java.lang.String" itemvalue="Python.auto_follow" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.gen_tweet" />
-        <item index="1" class="java.lang.String" itemvalue="Python.get_alltweets" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.auto_follow" />
+        <item index="1" class="java.lang.String" itemvalue="Python.gen_tweet" />
+        <item index="2" class="java.lang.String" itemvalue="Python.get_alltweets" />
       </list>
     </recent_temporary>
   </component>
@@ -315,7 +348,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="537" y="94" width="1280" height="771" extended-state="0" />
+    <frame x="317" y="114" width="1280" height="771" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -425,18 +458,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gen_tweet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1275">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="e#33#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/get_alltweets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="549" max-vertical-offset="952">
-          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="952">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gen_tweet.py">
+    <entry file="file://$PROJECT_DIR$/auto_follow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6730769" vertical-offset="757" max-vertical-offset="1173">
-          <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.4278846" vertical-offset="502" max-vertical-offset="918">
+          <caret line="40" column="63" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
           <folding>
             <element signature="e#33#46#0" expanded="true" />
           </folding>

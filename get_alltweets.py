@@ -12,6 +12,9 @@ consumer_secret = keys_list[1]
 access_token = keys_list[2]
 access_token_secret = keys_list[3]
 
+#set username
+user_name = keys_list[4]
+
 #OAuth process, using the keys and tokens
 auth = tweepy.OAuthHandler(consumer_key,consumer_secret)
 auth.set_access_token(access_token,access_token_secret)
@@ -22,9 +25,6 @@ api = tweepy.API(auth)
 #############################################################
 #include this at the beginning of all twitter access scripts#
 #############################################################
-
-#set username
-user_name = keys_list[4]
 
 #start getting tweets
 new_tweets = api.user_timeline(screen_name = user_name, count=200)
@@ -45,7 +45,7 @@ all_tweets_txt = [tweets.text for tweets in all_tweets]
 #remove various things from all_tweets_txt
 all_tweets_txt_notag = []
 for i in range(len(all_tweets_txt)):
-    new_string = " ".join(word for word in all_tweets_txt[i].split() if not '@' in word and not '#' in word and not 'http' in word and not 'RT' in word)
+    new_string = " ".join(word for word in all_tweets_txt[i].split() if not '@' in word and not 'http' in word and not 'RT' in word)
     all_tweets_txt_notag.append(new_string)
 
 #dump list to pickle db
