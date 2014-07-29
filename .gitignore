@@ -5,6 +5,11 @@
 #configfile
 config.txt
 
+#pickledb files
+all_mentions.p
+new_mentions.p
+all_tweets.p
+
 
 *.pydevproject
 .project
