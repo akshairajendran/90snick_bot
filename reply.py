@@ -21,8 +21,9 @@ consumer_secret = keys_list[1]
 access_token = keys_list[2]
 access_token_secret = keys_list[3]
 
-#set username
+#set username and bot name
 user_name = keys_list[4]
+bot_name = keys_list[5]
 
 #OAuth process, using the keys and tokens
 auth = tweepy.OAuthHandler(consumer_key,consumer_secret)
@@ -83,6 +84,7 @@ def reply():
     else:
         #load up most recent mention, tokenize and split it
         #grab all users mentioned in mention
+        #if the mention author is the bot itself, ignore
         #if the mention author isn't already in list, add him/her
         mention = new_mentions[-1].text
         mention_author = "@" + new_mentions[-1].author.screen_name
@@ -90,6 +92,10 @@ def reply():
         mention_split = mention.split()
         mention_pos = nltk.pos_tag(mention_split)
         mention_users = [word for word in mention_split if '@' in word]
+        if new_mentions[-1].author.screen_name == bot_name:
+            return
+        else:
+            pass
         if mention_author not in mention_users:
             mention_users.append(mention_author)
         else:
