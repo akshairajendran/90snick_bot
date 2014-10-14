@@ -96,8 +96,8 @@ def reply():
             return
         else:
             pass
-        if mention_author not in mention_users:
-            mention_users.append(mention_author)
+        if mention_author in mention_users:
+            mention_users.remove(mention_author)
         else:
             pass
 
