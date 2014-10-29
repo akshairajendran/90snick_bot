@@ -98,6 +98,8 @@ def reply():
             pass
         if mention_author in mention_users:
             mention_users.remove(mention_author)
+        elif mention_author.lower() in mention_users:
+            mention_users.remove(mention_author.lower())
         else:
             pass
 
