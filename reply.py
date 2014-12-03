@@ -96,12 +96,13 @@ def reply():
             return
         else:
             pass
-        if mention_author in mention_users:
-            mention_users.remove(mention_author)
-        elif mention_author.lower() in mention_users:
-            mention_users.remove(mention_author.lower())
-        else:
-            pass
+        for user in mention_users:
+                if mention_author in user:
+                    mention_users.remove(user)
+                elif mention_author.lower() in user:
+                    mention_users.remove(user)
+                else:
+                    pass
 
         #find verbs, proper nouns and pronouns in mention
         mention_verbs = [tuple[0] for tuple in mention_pos if tuple[1] == 'VB' or tuple[1] == 'VBD' or tuple[1] == 'VBG' or tuple[1] == 'VBN' or tuple[1] == 'VBP' or tuple[1] == 'VBZ']
